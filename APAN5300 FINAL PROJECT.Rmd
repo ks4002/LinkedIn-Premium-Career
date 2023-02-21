@@ -1,0 +1,776 @@
+
+---
+title: <p align="center"> FP10 Study the Effect of LinkedIn Premium Career </p>
+
+author:
+  <p align="center"> Kanyarat Suwannama ︳ Nathan Ge ︳ Mia Szpolski ︳ Usra Khan ︳ Zemei Jamie Liang</p>
+  
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: no
+    df_print: paged
+  bookdown::pdf_document2:
+    fig_caption: yes
+    toc: no
+  pdf_document:
+    
+    toc: no
+    fontfamily: mathpazo
+    fontsize: 11pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="", warning = FALSE, message = FALSE, tidy.opts=list(width.cutoff=55), tidy = TRUE)
+```
+
+## Executive Summary
+**Author: Mia 100%**
+
+Transitioning from college or graduate school into the working world can be very challenging. Understanding the job market takes time, it requires researching for companies, culture, salaries, location, and so does networking. Linkedin Premium can be an effective solution for students to enter the working world with ease. As the world’s leading professional network, the premium option for this site allows its users to connect with hiring managers through an in mail service, see who views their profile over a period of 90 days, and access LinkedIn learning resources; apart from its basic functions that allows its users to research industries and build a strong professional network. Thus, is Linkedin Premium the answer to students stepping into the working world? This study examines the efficacy of LinkedIn Premium on delivering direct outcomes translated into connections and job/internship interviews to college students. The proposed model will be tested by using Two-Sample one sided T-Test. Results will indicate the average number of  interviews obtained for students with Linkedin Premium accounts, as well as average number of connections per student, and lastly, average rate of satisfaction.  
+
+## Statement of the Problem
+**Author: Nathan 100%**
+
+LinkedIn has been a ubiquitous career-oriented online platform that bridges the gap between job seekers and job recruiters with valuable services such as professional networking and job recruiting. Its extended version, LinkedIn Premium, enhances careers and businesses by unlocking exclusive benefits such as advanced search options and in mail messaging. Nonetheless, is LinkedIn Premium a sound investment for college students? For job seekers, LinkedIn Premium is offered at various price points, ranging from 29.99 dollars to 59.99 dollars a month. Insufficient research has shown that a premium account prioritizes a job seeker to the top of an employer search on LinkedIn. Further social and ethical questions rise to the surface as whether businesses should build up the connection intrusively through LinkedIn Premium or establish relationships organically between employers and employees.
+
+
+## Research Questions and Hypotheses
+**Author: Usra 100%**
+
+**Research Question 1**:
+Could the LinkedIn Premium be a better alternative to help students receive more job interviews on average as opposed to students not using the premium feature? 
+
+- **Null Hypothesis :**
+Through LinkedIn Premium students will receive more job interviews as opposed to the Basic LinkedIn account users. 
+- **Alternative Hypothesis:**
+That there will not be an average increase in job interviews via LinkedIn Premium.
+
+
+**Research Question 2:**
+Relative to the LinkedIn Basic account, is LinkedIn Premium providing a greater average of networking-based responses? 
+
+- **Null Hypothesis:**
+With LinkedIn Premium students will have access to more networking opportunities and will receive a greater amount of responses as opposed to the Basic plan. 
+- **Alternative Hypothesis:**
+The premium students receive the same if not less network based responses.
+
+**Research Question 3:**
+Does the average student feel more satisfied with the LinkedIn Premium as opposed to their LinkedIn Basic account enough to buy the premium subscription? 
+
+- **Null Hypothesis:**
+LinkedIn Basic Premium indicates lower or same satisfaction rate as LinkedIn Premium does among students
+- **Alternative Hypothesis:**
+LinkedIn Premium account indicates higher satisfaction rate than LinkedIn Premium does among students
+
+
+
+## Importance of the study
+**Author: Usra 100%**
+
+Students are beginning to use LinkedIn more and more, it is one of the few leading social media platforms for those hunting for experience as well as businesses . People use LinkedIn for a multitude of reasons such as creating one's identity, increasing exposure, learning and understanding more about companies they see a future in etc. There is a lot of competition for college students trying to find internships and jobs in their field. The point of linked in is to help them get their foot through a door and provide them with opportunities that may have been harder to find. Through this platform they can connect with like minded people and get the answers they are looking for regarding their future. 
+
+The reason we believe that this study is of importance is because we want to be able to provide students all over the U.S. a clear answer when it comes to signing up for linkedIn. Will a premium membership be beneficial for a college student in terms of finding jobs and internships, connecting with people, and obtaining more opportunities in their fields of interest? We already know that by having an account and being active you allow yourself to be found by companies and begin to make an impact regarding your future. But with the premium account will these students be provided with more interviews and networking means? 
+
+ If obtaining a premium account brings more attention to your profile and opens up doors we can see more students using LinkedIn in the future. It will be shown through our study that LinkedIn Premium will boost your chances in finding more work related opportunities. However if we see that there is no correlation between premium profiles and LinkedIn Basic profiles we can emphasize that as a college student having an account itself is a big start. This is especially true if you compare the experience of finding internships and jobs through this platform as opposed to a traditional method. We know how easy it is to connect with professionals on social media and trying to do that in person or through your own means may take longer or prove one unsuccessful. 
+
+
+## Literature Review
+**Author: Mia 100%**
+
+Across the information available on the internet, we found some important  points to take into account to plan and conduct our research effectively, such as statistics on Linkedin usage, demographic, and ways companies and users take advantage of it. We also looked into student behavior towards online networking services, and the impact of free trials in technology-based services.
+ 
+According to a report from Jobvite, 87% of recruiters regularly use LinkedIn  as a medium to find the right candidates, and 67% of recruiters say that LinkedIn provides the highest quality applicants. Other competitors mentioned in the report as social media channels that source the best quality candidates are Facebook, Glassdoor, and Instagram. This same report also clarifies thay Linkedin usage has gone down 20% in  2017, when it levels were at 92% usage for recruiting. In contrast, the use of Instagram as a medium for recruiting has gone up from 18% in 2017 to 37% today. However, Linkedin is still a leader when it comes to recruiting through social media channels, followed by Facebook, then twitter, and lastly Instagram. Another important consideration to take into account from the Jobvite report is that Linkedin and Glassdoor are more often used for in-house positions.
+
+A report on Kinsta shows that of those LinkedIn users who are frequently engaging with the platform, 40% access the platform every day, which translates into 1 billion monthly interactions. According to the Pew Research Center 2018 Social Media Use study, LinkedIn remains popular with college students. In fact, 50% of US college graduates are LinkedIn users. As stated by Linkedin, college students and recent graduates are the fastest-growing user demographic on the site. According to a study led by HJ Carmack and SN Heiss, “Using the Theory of Planned Behavior to Predict College Students’ Intent to Use LinkedIn for Job Searches and Professional Networking”, a majority of participants agreed on the effectiveness of LinkedIn as a medium for finding jobs and internships. Also, the study shows that past behaviors, attitudes, perceived behavioral control, and actual behavioral control directly affect the effectiveness of LinkedIn to help students find internships and jobs.
+
+Another interesting study led by Syed Ali Raza, Wasim Qazi, Bushra Umer, Komal Akram Khan, looked into student’s satisfaction influenced by the use of social networking sites. Results showed that students participate in social networking sites due to the need to maintain interpersonal connectivity, social enhancement value, and entertainment value. By joining these networks students increase social benefit, which increases life satisfaction levels. 
+
+There are over 55 million companies listed on LinkedIn and 14 million open jobs according to LinkedIn News. A study conducted by Statistic Brain Research Institute found that 122 million people got an interview thanks to their engagement on LinkedIn; 35.5 million people were hired by the recruiter they connected with on the platform. According to LinkedIn statistics, 3 people are hired through LinkedIn every minute. LinkedIn statistics also show that employees hired through the platform are 40% less likely to leave the company in the first 6 months.
+
+Lastly, we understand that free trials are a common tool used by many companies; in order to really understand the benefits of these marketing strategies, we looked into published articles and studies that specifically investigated the effectiveness of free trials. A study led by Dong Hong and ZhuYa PingChang explored consumer attitude and intention toward free trial of technology-based services. The study showed that some of the determinant factors were perceived usefulness, ease of use, risk, and social influence. The usefulness of a technology-based service (Such as Linkedin) is essential to the user experience, since the consumer is putting time and effort into using the free trial, thus in order for it to be productive, the service should be useful. 
+
+
+## Research Plan
+
+
+- **Population of Interest**:
+
+**Author:  Kanyarat 100%**
+
+The population consists of all students who currently study in US universities and use Linkedin for job seeking. 
+
+- **Sample Selection**:
+
+**Author:  Kanyarat 90% Jamie 10%**
+
+The stratified random sampling method is used to randomly select the sample selection of students in the US based on Linkedin basic profiles and identified as students who meet the criteria of having a complete profile, have been active the past 30 days, in their Junior or Senior year of college. Each of the selected samples should also meet below criteria: have a reasonably complete profile, have been active the past 30 days.
+
+These two groups have mutually exclusive characteristics. This method provides better coverage of the population and adequate data for analyzing the groups individually since the researchers control the subgroups to ensure adequate population representation for analyzing the groups separately and eliminate threats to the validity selection process.
+
+
+
+- **Sample Size**: 
+
+**Author: Jamie 100%**
+
+Assumption: we assume a moderate effect for the LinkedIn Premium Career Account  
+
+Standard Deviation of control group= 3
+Mean (treatment group) - Mean (control group) = 2
+
+Effective size based on assumptions above: 2/3=0.66
+
+Using the power test, we choose a total sample of 80 students for the study to achieve the power of rejecting false null over 99%. This sample size is equivalent to 40 sample students in the control group and 40 sample students in the treatment group. 
+
+```{r pwr}
+
+library(pwr)
+pwr.2p.test(h = 0.66,
+           n = NULL,
+           sig.level = 0.05,
+           power = 0.99,
+           alternative = "greater")
+```
+
+
+- **Operational Procedures**:
+
+**Author: Jamie 100%**
+
+    A. Partner with LinkedIn to get access to the database and select sample students across the county that have never been linkedin Premium Career users before. 
+    
+    B.Through email, offer half of the sample group of students (treatment group) a free trial of LinkedIn Premium Career profile for 1 FALL semester/3-month (from September to December), while the half of the sample group of students remained with LinkedIn Basic profile (control group).
+
+    C. After the trial period, partner with LinkedIn to send out an app in-mail survey to both groups about their career development using LinkedIn. Those who participate will receive a free month of LinkedIn Premium Career profile. 
+    
+    D. Collect data and analyze the data from surveys.
+
+    
+- **Brief Schedule**: 
+**Author: Kanyarat 100%**
+
+**Stage1 : Research design and planning** (Activity Finalize research questions, Develop research design, Prepare research proposal, Review and develop literature review)
+
+Date: 07/01/2022 - 07/31/2022 (1 month)
+
+**Stage2 : Data Collection** (Finalise sampling plan, Development of research tools, Carry out data collection from LinkedIn database, Select sample of population)
+
+Date: 08/01/2022 - 08/31/2022 (1 month)**
+
+**Stage3 : Data Examination** (Apply LinkedIn Premium for the treament group, Remain LinkedIn Basic profile for the control group, Distrubuting questionnaires with In-mail messages)
+
+Date: 09/01/2022 - 12/15/2022 (2.5 month/1 Fall Semester)
+
+**Stage4 : Data Analysis** (Analyse data, Conclusion and Recommendation)
+
+Date: 12/15/2022 - 12/25/2022 (10 days)
+
+**Stage5 : Review and Final Submission** 
+
+Date: 12/25/2022 - 12/31/2022 (7 days)
+
+
+- **Data Collection**:
+
+**Author: Nathan 100%**
+
+A feedback survey will be set up to identify and quantify the overall sentiment and satisfaction of LinkedIn premium users. In-mail surveys will serve as means to provide users with liberty to convey their satisfaction rate, experience, and further suggestions through their responses. Our questionnaire will be designed with Likert scale in a reliable, valid, and succinct manner to allow respondents to express their level of agreement or sentiment about the question or statement on a positive-to-negative scale. To collect data regarding perceptions of LinkedIn premium, both open-ended and closed-ended questionnaires will be administered to a sample of 80 Columbia University students across different departments on campus. The resulting numerical data will be analyzed statistically to display a median and a mode and the distribution of observations in a bar chart.  The open-ended survey inquires participants with questions such as in what aspects has LinkedIn premium helped you network or secure a job. The survey result is qualitative and quantitative and can be interpreted further through content analysis. 
+
+- **Data Security**:
+
+**Author: Nathan 100%**
+
+According to research from IBM and Ponemon Institute, the average cost of data breach is more than 8.5 million dollars. Data breach can be detrimental to our research design. Therefore, our primary objective is to collect data in a secure manner with the proper level of anonymity, confidentiality, or de-identification that is critical to establishing a low-risk threshold for the participants and the researchers. The research team will be trained with data security protocols and strictly adhere to data security controls. All critical and sensitive data will be encrypted on portal devices. Only the research team will gain access to the information with a high complex level password. Our team will be monitoring the data acquired in order to assure the safety of the subjects in the study to preserve participants’ privacy and data confidentiality. Privacy and protection of confidential information will be upheld to the highest degree to ensure privacy and confidentiality. 
+
+- **Variables:**:
+
+**Author: Kanyarat 90% Jamie 10%**
+
+
+  **Outcome (dependent variables)**
+ 
+Research Question 1 : 
+  ‘Could the LinkedIn Premium be a better alternative to help students receive more job interviews on average as opposed to students not using the premium feature?’. 
+
+**Dependent Variables** : The number of job interviews for students of each LinkedIn Basic group and LinkedIn Premium Career group. 
+
+Research Question 2:
+ ‘Relative to the LinkedIn Basic account, is LinkedIn Premium providing a greater average of networking-based responses?’. 
+
+**Dependent Variables** : The response rate for students of each LinkedIn Basic group and LinkedIn Premium Career group (which might be a proportion or a percentage).
+
+Research Question 3:
+‘Does the average student feel more satisfied with the LinkedIn Premium as opposed to their LinkedIn Basic account enough to buy the premium subscription?’. 
+
+**Dependent Variables** : Satisfaction Rating Scale 1-5 for students of each LinkedIn Basic group and LinkedIn Premium Career group. The five questions would be asked to increase the likelihood of completion because customers do not like to do surveys for a long time, and thus, short surveys may result in higher response rates. Also, In-mail messages and rewards tend to gain more participants on the survey.
+
+**Based on the user’s satisfaction (0-5 scale)** :
+
+- Very Satisfied = 5
+- Satisfied = 4
+- Neutral = 3
+- Dissatisfied = 2
+- Very Dissatisfied = 1
+- N/A = No response
+
+**Survey questions :**
+
+During the past 3 months, approximately how many job interviews have you received through applying for jobs on LinkedIn?
+
+During the past 3 months, approximately how many new connections have you made through Linkedin?
+
+How is your overall satisfaction with your LinkedIn account on a scale from 1 (Very Dissatisfied) to 5 (Very Satisfied) ?
+
+How useful is the in-app communication tool to help you connect with professionals on a scale from 1 (Very Dissatisfied) to 5 (Very Satisfied)?
+
+How do you find LinkedIn job recommendations on a scale from 1 (Very Dissatisfied) to 5 (Very Satisfied) ? 
+
+How do you receive LinkedIn notifications from InMails messages and Email on a scale from 1 (Very Dissatisfied) to 5 (Very Satisfied) ?
+
+How do you learn from LinkedIn insights about jobs and industry on a scale from 1 (Very Dissatisfied) to 5 (Very Satisfied) ?
+
+
+**Treatments (Independent Variables)**
+
+LinkedIn offers a free basic account and monthly-paid career premium account for the professional profile to quickly reach out to the recruiter, increasing search visibility and becoming featured on job applicant listings. Therefore, this research would have **2 independent variables: LinkedIn Basic account (Control group) and LinkedIn Premium Career account (Treatment group)**.
+
+LinkedIn Basic account fratures: 
+
+- Build network only through mutual connections.
+- 5 profile views in the last 90 days.
+- Only can send InMail
+- Free
+
+LinkedIn Premium Career account features:
+
+- Build network without needing to be introduced or connected.
+- Unlimited profile views in the last 90 days.
+- Both send and receive 5 InMail messages per month.
+- Allow any LinkedIn member to reach out without InMail credits.
+- More ability to search for company size, ranking, seniority, and etc.
+- Job applications automatically sit above basic members.
+- Provide detailed breakdown of salaries by job title and location.
+- Access to learning courses to build new skills.
+- 16,000 courses online learning with on-demand, video-based content.
+- $29.99/month ($239.88/year for the annual plan).
+
+
+## Statistical Analysis Plan:
+
+**Author: Jamie 100%**
+
+RQ1 - Average interviews received per student 
+
+Two-Sample one sided t Test (alternative = "greater", on average, those students that have Linkedin Premium Career account would receive more interviews than that those who don't )
+
+RQ2 - Average number of connections made per student 
+
+Two-Sample one sided t Test (alternative = "greater", on average, those students that have LinkedIn Premium Career account would make more connections than that those who don't )
+
+RQ3 - Average satisfaction Rate
+
+Two-Sample one sided t Test (alternative = "greater", on average, those students that have LinkedIn Premium Career account would be more satisfied with the LinkedIn app than that those who don't )
+
+
+## Limitations and Uncertainties :
+**Author: Nathan 100%**
+
+One of the biggest challenges in this research design is response bias. Biased responses, whether intentional or unintentional, might render the survey results less reliable and less accurate. With self-reporting surveys, this problem might distort the data. When implementing Likert scales, participants might misinterpret the questions and produce feedback with skewed results.
+Intervals between points on the Likert scale do not present equal changes in attitude for all participants. For instance, the differences between strongly agree and agree, and even internal consistency of the scale may be difficult to achieve.
+
+
+## Simulation :
+**Author: Jamie 27.5% Kanyarat% 27.5% Nathan 15% Mia 15% Usra 15%**
+
+We have run total of six simulations (two scenarios for each of the three Research Questions). Each simulation is studied from 80 randomly generated outcomes and each of simulation study are repeated 1000 times. Below are the detailed simulations:
+
+### RQ1 - No effect
+##### Assumption: During 3-month trial period, average interview amount received by each student through applying jobs on LinkedIn for LinkedIn Basic & LinkedIn Premium accounts are the same which is 3. 
+
+##### Findings: After that we conducted 1000 simulated studies, each with an overall sample size of 80. Each experiment was analyzed with a two-sample, one-sided t test. The Mean Effect in the Simulated Data is 0.15. With 95% Confidence Interval of Mean Effect results in -0.43 for 2.5th quantiles and 0.45 for 97.5th quantiles. This is implied into Scenario 1 (No Effect); the percentage of false positives  is 4.7% and percentage of true negatives is 95.3%.
+```{r RQ1NE, echo=FALSE}
+n <- 80
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+link.dat <- data.table(Group = c(rep.int(x = "LinkedIn Premium",times = n/2), rep.int(x = "LinkedIn Basic",times = n/2)))
+
+link.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+link.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+datatable(data = link.dat)
+
+analyze.experiment <- function(the.dat) {
+    require(data.table)
+    setDT(the.dat)
+    
+    the.test <- t.test(x = the.dat[Group == "LinkedIn Premium", 
+        Link], y = the.dat[Group == "LinkedIn Basic", Link], alternative = "greater")
+    
+    the.effect <- the.test$estimate[1] - the.test$estimate[2]
+    upper.bound <- the.test$conf.int[2]
+    p <- the.test$p.value
+    
+    
+    result <- data.table(effect = the.effect, upper_ci = upper.bound, 
+        p = p)
+    
+    return(result)
+   
+}
+analyze.experiment(the.dat = link.dat)
+
+
+B <- 1000
+n <- 80
+RNGversion(vstr = 3.6)
+set.seed(seed = 4172)
+Experiment <- 1:B
+Group <- c(rep.int(x = "LinkedIn Premium", times = n/2), rep.int(x = "LinkedIn Basic", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+sim.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+    keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:1000, ], digits = 3), 
+    rownames = F)
+exp.results[, mean(p < 0.05)]
+exp.results[, summary(effect)]
+
+#summarize range of observed effects
+exp.results[, summary(effect)]
+#summarize range of upper bound of 95% confidence interval
+exp.results[, summary(upper_ci)]
+
+#95% Confidence Interval estimated effect
+#2.5th and 97.5th quantiles
+lower <- quantile(exp.results$effect, 0.025)
+lower
+upper <- quantile(exp.results$effect, 0.975)
+upper
+
+#False Positive
+n=1000 # testing 1000 times
+t1err=0
+for (i in 1:n){
+  x=rnorm(100, 0, 1)
+  if (((t.test(x, mu=0))$p.value)<=0.05) (t1err=t1err+1) 
+}
+cat("Type I error rate in percentage is", (t1err/n)*100,"%")
+
+```
+
+### RQ1 - Effect
+##### Assumption: During 3-month trial period, average interview amount received by each student through applying jobs on LinkedIn for LinkedIn Basic account is 3 while for LinkedIn Premium account is 6
+
+##### Findings: After that we conducted 1000 simulated studies, each with an overall sample size of 80. Each experiment was analyzed with a two-sample, one-sided t test. The Mean Effect in the Simulated Data is 3.15. With 95% Confidence Interval of Mean Effect results in 2.57 for 2.5th quantiles and 3.45  for 97.5th quantiles. This is implied into Scenario 2 (Effect); the percentage of false negative is 0% and percentage of true positive is 100%.
+```{r RQ1E, echo=FALSE}
+n <- 80
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+link.dat <- data.table(Group = c(rep.int(x = "LinkedIn Premium",times = n/2), rep.int(x = "LinkedIn Basic",times = n/2)))
+
+link.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+link.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 6, sd = 1), digits = 0)]
+datatable(data = link.dat)
+
+analyze.experiment <- function(the.dat) {
+    require(data.table)
+    setDT(the.dat)
+    
+    the.test <- t.test(x = the.dat[Group == "LinkedIn Premium", 
+        Link], y = the.dat[Group == "LinkedIn Basic", Link], alternative = "greater")
+    
+    the.effect <- the.test$estimate[1] - the.test$estimate[2]
+    upper.bound <- the.test$conf.int[2]
+    p <- the.test$p.value
+    
+    result <- data.table(effect = the.effect, upper_ci = upper.bound, 
+        p = p)
+    
+    return(result)
+   
+}
+analyze.experiment(the.dat = link.dat)
+
+B <- 1000
+n <- 80
+RNGversion(vstr = 3.6)
+set.seed(seed = 4172)
+Experiment <- 1:B
+Group <- c(rep.int(x = "LinkedIn Premium", times = n/2), rep.int(x = "LinkedIn Basic", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+sim.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 6, sd = 1), digits = 0)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+    keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:1000, ], digits = 3), 
+    rownames = F)
+exp.results[, mean(p < 0.05)]
+exp.results[, summary(effect)]
+
+#summarize range of observed effects
+exp.results[, summary(effect)]
+#summarize range of upper bound of 95% confidence interval
+exp.results[, summary(upper_ci)]
+
+#95% Confidence Interval estimated effect
+#2.5th and 97.5th quantiles
+lower <- quantile(exp.results$effect, 0.025)
+lower
+upper <- quantile(exp.results$effect, 0.975)
+upper
+
+#False Negative
+truepositive1 = exp.results[,mean(p<0.05)]
+truepositive1
+falsenegative1 = 1 -  exp.results[,mean(p<0.05)]
+falsenegative1
+
+```
+
+### RQ2 - No effect
+##### Assumption: During 3-month trial period, average response amount received by each student for LinkedIn Basic & LinkedIn Premium accounts are the same which is 9
+
+##### Findings: After that we conducted 1000 simulated studies, each with an overall sample size of 80. Each experiment was analyzed with a two-sample, one-sided t test. The Mean Effect in the Simulated Data is 0.15. With 95% Confidence Interval of Mean Effect results in -0.43 for 2.5th quantiles and  0.45 for 97.5th quantiles. This is implied into Scenario 1 (No Effect); the percentage of false positive is 4.7% and percentage of true negatives is 95.3%.
+```{r RQ2NE, echo=FALSE}
+
+n <- 80
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+link.dat <- data.table(Group = c(rep.int(x = "LinkedIn Premium",times = n/2), rep.int(x = "LinkedIn Basic",times = n/2)))
+
+link.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 9, sd = 1), digits = 0)]
+link.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 9, sd = 1), digits = 0)]
+datatable(data = link.dat)
+
+analyze.experiment <- function(the.dat) {
+    require(data.table)
+    setDT(the.dat)
+    
+    the.test <- t.test(x = the.dat[Group == "LinkedIn Premium", 
+        Link], y = the.dat[Group == "LinkedIn Basic", Link], alternative = "greater")
+    
+    the.effect <- the.test$estimate[1] - the.test$estimate[2]
+    upper.bound <- the.test$conf.int[2]
+    p <- the.test$p.value
+    
+    result <- data.table(effect = the.effect, upper_ci = upper.bound, 
+        p = p)
+    
+    return(result)
+   
+}
+analyze.experiment(the.dat = link.dat)
+
+B <- 1000
+n <- 80
+RNGversion(vstr = 3.6)
+set.seed(seed = 4172)
+Experiment <- 1:B
+Group <- c(rep.int(x = "LinkedIn Premium", times = n/2), rep.int(x = "LinkedIn Basic", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 9, sd = 1), digits = 0)]
+sim.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 9, sd = 1), digits = 0)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+    keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:1000, ], digits = 3), 
+    rownames = F)
+exp.results[, mean(p < 0.05)]
+exp.results[, summary(effect)]
+
+#summarize range of observed effects
+exp.results[, summary(effect)]
+#summarize range of upper bound of 95% confidence interval
+exp.results[, summary(upper_ci)]
+
+#95% Confidence Interval estimated effect
+#2.5th and 97.5th quantiles
+lower <- quantile(exp.results$effect, 0.025)
+lower
+upper <- quantile(exp.results$effect, 0.975)
+upper
+
+#False Positive
+n=1000 # testing 1000 times
+t1err=0
+for (i in 1:n){
+  x=rnorm(100, 0, 1)
+  if (((t.test(x, mu=0))$p.value)<=0.05) (t1err=t1err+1) 
+}
+cat("Type I error rate in percentage is", (t1err/n)*100,"%")
+
+```
+
+
+
+### RQ2 - Effect
+##### Assumption: During 3-month trial period, average response amount received by each student for LinkedIn Basic account is 9 while for LinkedIn Premium account is 18
+
+##### Findings: After that we conducted 1000 simulated studies, each with an overall sample size of 80. Each experiment was analyzed with a two-sample, one-sided t test. The Mean Effect in the Simulated Data is 9.15. With 95% Confidence Interval of Mean Effect results in 8.57 for 2.5th quantiles and  9.45 for 97.5th quantiles. The 2.5th quantile and 97.5th quantiles has a small gap difference. This is implied into Scenario 2 (Effect); the percentage of false negative is 0% and percentage of true positive is 100%.
+```{r RQ2E, echo=FALSE}
+
+n <- 80
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+link.dat <- data.table(Group = c(rep.int(x = "LinkedIn Premium",times = n/2), rep.int(x = "LinkedIn Basic",times = n/2)))
+
+link.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 9, sd = 1), digits = 0)]
+link.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 18, sd = 1), digits = 0)]
+datatable(data = link.dat)
+
+analyze.experiment <- function(the.dat) {
+    require(data.table)
+    setDT(the.dat)
+    
+    the.test <- t.test(x = the.dat[Group == "LinkedIn Premium", 
+        Link], y = the.dat[Group == "LinkedIn Basic", Link], alternative = "greater")
+    
+    the.effect <- the.test$estimate[1] - the.test$estimate[2]
+    upper.bound <- the.test$conf.int[2]
+    p <- the.test$p.value
+    
+    result <- data.table(effect = the.effect, upper_ci = upper.bound, 
+        p = p)
+    
+    return(result)
+   
+}
+analyze.experiment(the.dat = link.dat)
+
+B <- 1000
+n <- 80
+RNGversion(vstr = 3.6)
+set.seed(seed = 4172)
+Experiment <- 1:B
+Group <- c(rep.int(x = "LinkedIn Premium", times = n/2), rep.int(x = "LinkedIn Basic", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 9, sd = 1), digits = 0)]
+sim.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 18, sd = 1), digits = 0)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+    keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:1000, ], digits = 3), 
+    rownames = F)
+exp.results[, mean(p < 0.05)]
+
+exp.results[, summary(effect)]
+
+
+#summarize range of observed effects
+exp.results[, summary(effect)]
+#summarize range of upper bound of 95% confidence interval
+exp.results[, summary(upper_ci)]
+
+#95% Confidence Interval estimated effect
+#2.5th and 97.5th quantiles
+lower <- quantile(exp.results$effect, 0.025)
+lower
+upper <- quantile(exp.results$effect, 0.975)
+upper
+
+#False Negative
+truepositive1 = exp.results[,mean(p<0.05)]
+truepositive1
+falsenegative1 = 1 -  exp.results[,mean(p<0.05)]
+falsenegative1
+
+```
+
+### RQ3 - No effect
+##### Assumption: During 3-month trial period, average satisfaction rate responded by each student for both LinkedIn Basic account & LinkedIn Premium account is 3
+
+##### Findings: After that we conducted 1000 simulated studies, each with an overall sample size of 80. Each experiment was analyzed with a two-sample, one-sided t test. The Mean Effect in the Simulated Data is 0.15. With 95% Confidence Interval of Mean Effect results in -0.43 for 2.5th quantiles and  0.45 for 97.5th quantiles. This is implied into Scenario 1 (No Effect); the percentage of false positive is 4.7% and percentage of true negatives is 95.3%.
+```{r RQ3NE, echo=FALSE}
+
+
+n <- 80
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+link.dat <- data.table(Group = c(rep.int(x = "LinkedIn Premium",times = n/2), rep.int(x = "LinkedIn Basic",times = n/2)))
+
+link.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+link.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+datatable(data = link.dat)
+
+analyze.experiment <- function(the.dat) {
+    require(data.table)
+    setDT(the.dat)
+    
+    the.test <- t.test(x = the.dat[Group == "LinkedIn Premium", 
+        Link], y = the.dat[Group == "LinkedIn Basic", Link], alternative = "greater")
+    
+    the.effect <- the.test$estimate[1] - the.test$estimate[2]
+    upper.bound <- the.test$conf.int[2]
+    p <- the.test$p.value
+    
+    result <- data.table(effect = the.effect, upper_ci = upper.bound, 
+        p = p)
+    
+    return(result)
+   
+}
+analyze.experiment(the.dat = link.dat)
+
+B <- 1000
+n <- 80
+RNGversion(vstr = 3.6)
+set.seed(seed = 4172)
+Experiment <- 1:B
+Group <- c(rep.int(x = "LinkedIn Premium", times = n/2), rep.int(x = "LinkedIn Basic", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+sim.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+    keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:1000, ], digits = 3), 
+    rownames = F)
+exp.results[, mean(p < 0.05)]
+exp.results[, summary(effect)]
+
+#summarize range of observed effects
+exp.results[, summary(effect)]
+#summarize range of upper bound of 95% confidence interval
+exp.results[, summary(upper_ci)]
+
+#95% Confidence Interval estimated effect
+#2.5th and 97.5th quantiles
+lower <- quantile(exp.results$effect, 0.025)
+lower
+upper <- quantile(exp.results$effect, 0.975)
+upper
+
+#False Positive
+n=1000 # testing 1000 times
+t1err=0
+for (i in 1:n){
+  x=rnorm(100, 0, 1)
+  if (((t.test(x, mu=0))$p.value)<=0.05) (t1err=t1err+1) 
+}
+cat("Type I error rate in percentage is", (t1err/n)*100,"%")
+
+```
+
+
+### RQ3 - Effect
+##### Assumption: During 3-month trial period, average satisfaction rate responded by each student for LinkedIn Basic account is 3 while for LinkedIn Premium account is 4
+
+##### Findings: After that we conducted 1000 simulated studies, each with an overall sample size of 80. Each experiment was analyzed with a two-sample, one-sided t test. The Mean Effect in the Simulated Data is 1.15. With 95% Confidence Interval of Mean Effect results in -0.43 for 2.5th quantiles and  0.45 for 97.5th quantiles. This is implied into Scenario 2 (Effect); the percentage of false negative is 0.4% and percentage of true positive is 99.6%.
+```{r RQ3E, echo=FALSE}
+
+
+n <- 80
+library(data.table)
+library(DT)
+set.seed(seed = 329)
+
+link.dat <- data.table(Group = c(rep.int(x = "LinkedIn Premium",times = n/2), rep.int(x = "LinkedIn Basic",times = n/2)))
+
+link.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+link.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 4, sd = 1), digits = 0)]
+datatable(data = link.dat)
+
+analyze.experiment <- function(the.dat) {
+    require(data.table)
+    setDT(the.dat)
+    
+    the.test <- t.test(x = the.dat[Group == "LinkedIn Premium", 
+        Link], y = the.dat[Group == "LinkedIn Basic", Link], alternative = "greater")
+    
+    the.effect <- the.test$estimate[1] - the.test$estimate[2]
+    upper.bound <- the.test$conf.int[2]
+    p <- the.test$p.value
+    
+    result <- data.table(effect = the.effect, upper_ci = upper.bound, 
+        p = p)
+    
+    return(result)
+   
+}
+analyze.experiment(the.dat = link.dat)
+
+B <- 1000
+n <- 80
+RNGversion(vstr = 3.6)
+set.seed(seed = 4172)
+Experiment <- 1:B
+Group <- c(rep.int(x = "LinkedIn Premium", times = n/2), rep.int(x = "LinkedIn Basic", times = n/2))
+
+sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+sim.dat[Group == "LinkedIn Basic", Link := round(x = rnorm(n = .N, mean = 3, sd = 1), digits = 0)]
+sim.dat[Group == "LinkedIn Premium", Link := round(x = rnorm(n = .N, mean = 4, sd = 1), digits = 0)]
+dim(sim.dat)
+exp.results <- sim.dat[, analyze.experiment(the.dat = .SD), 
+    keyby = "Experiment"]
+
+DT::datatable(data = round(x = exp.results[1:1000, ], digits = 3), 
+    rownames = F)
+exp.results[, mean(p < 0.05)]
+exp.results[, summary(effect)]
+
+#summarize range of observed effects
+exp.results[, summary(effect)]
+#summarize range of upper bound of 95% confidence interval
+exp.results[, summary(upper_ci)]
+
+#95% Confidence Interval estimated effect
+#2.5th and 97.5th quantiles
+lower <- quantile(exp.results$effect, 0.025)
+lower
+upper <- quantile(exp.results$effect, 0.975)
+upper
+
+#False Negative
+truepositive1 = exp.results[,mean(p<0.05)]
+truepositive1
+falsenegative1 = 1 -  exp.results[,mean(p<0.05)]
+falsenegative1
+
+```
+## Lessons from the simulation :
+**Author: Kanyarat% 35%**
+
+The result above shows that scenario 2 (effect) has a higher experiment power than scenario 1 (no effect). All 3 Research Questions in Scenario 1 (no effect) produce the same result of mean effect equal to 0.15, which consider low or no effect. The false positive is 4.7%, and the true negative is 95.3%, measuring the accuracy of the experiment. 
+
+While Scenario 2 (effect) results in a different mean effect, 95% Confidence Interval of Mean Effect, and false negative and true positive. Research Question 2 (Relative to the LinkedIn Basic account, is LinkedIn Premium providing a greater average of networking-based responses?) results in the highest experiment power of 91.5% and 0% false negative and 100% true negative. There is a slight difference between 2.5th quantiles (85.7%) and 97.5th quantiles (94.5%). The result indicates that the model will demonstrate accurate results. However, we have to keep in mind that sampling variation plays a role in the experiment's results.
+ 
+Noted that the statistical test is a one-tail T-test. Hence, 95% Confidence Interval of Mean Effect results in "Inf" - using the confidence interval to make null hypothesis testing decisions would fail to reject the null in this case. (assuming the null is that the difference is not different from 0). 
+
+## References
+**Author: Equally Split%** 
+
+Adam, M. (2021, February 6). The Ultimate LinkedIn Premium Comparison. LinkedIn. Retrieved March 1, 2022, from https://www.linkedin.com/pulse/ultimate-linkedin-premium-comparison-mic-adam
+Cleverly. (2021, January 12). Is LinkedIn Premium Really Worth It? Retrieved March 1, 2022, from https://www.cleverly.co/blog/is-linkedin-premium-really-worth-it
+Investopedia. (2021, February 25). Linkedin Premium: Is It Worth the Cost? Retrieved March 1, 2022, from https://www.investopedia.com/articles/personal-finance/101515/how-linkedin-premium-can-help-find-your-next-job.asp#toc-how-a-linkedin-basic-free-account-works
+Kapko, M. S. F. (2019, April 23). Why LinkedIn Premium is worth the money. CIO. Retrieved March 1, 2022, from https://www.cio.com/article/251155/why-linkedin-premium-is-worth-the-money.html#:%7E:text=LinkedIn%20Premium%20is%20offered%20in,Annual%20billing%20offers%20slight%20discounts.
+Schaffer, N. (2022, February 16). LinkedIn Premium Is Worth It. Here’s Why. Neal Schaffer. Retrieved March 1, 2022, from https://nealschaffer.com/is-linkedin-premium-worth-it/#2-what-are-the-general-advantages-of-linkedin-premium
+SurveyMonkey. (n.d.). Survey rating scales: numbered vs worded lists. Retrieved March 1, 2022, from https://www.surveymonkey.com/mp/presenting-your-rating-scales-numbered-versus-worded-lists/
